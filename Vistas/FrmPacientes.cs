@@ -93,12 +93,31 @@ namespace Vistas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Paciente eliminar_paciente = new Paciente();
 
-            eliminar_paciente.Paciente_Id = obtener_PacienteId_Seleccionado();//Asignar el ID del paciente seleccionado
+            if (dgvPacientes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un paciente para eliminar.");
+                return;
+            }
 
-            TrabajarPaciente.eliminar_paciente(eliminar_paciente);
-            load_pacientes();
+            Paciente eliminarPaciente = new Paciente();
+
+            //Obtener el ID del paciente a modificar
+            eliminarPaciente.Paciente_Id = obtener_PacienteId_Seleccionado();
+
+            DialogResult confirmacion = MessageBox.Show(
+                "¿Está seguro que desea eliminar el paciente seleccionado?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                TrabajarPaciente.eliminar_paciente(eliminarPaciente);
+                load_pacientes();
+                MessageBox.Show("Paciente eliminado correctamente");
+            }
             //LimpiarForm(this);
         }
 

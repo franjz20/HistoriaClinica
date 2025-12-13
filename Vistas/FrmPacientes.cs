@@ -34,20 +34,34 @@ namespace Vistas
             var vistaTabla = tablaDatos.AsEnumerable()
                 .Select(row => new
                 {
-                    Id = row["PacienteId"],
-                    DNI = row["DNI"],
-                    Apellido = row["Apellido"],
-                    Nombre = row["Nombre"],
-                    Email = row["Email"],
-                    ObraSocial = row["ObraSocial"],
-                    Observaciones = row["Observaciones"]
+                    Id = Convert.ToInt32(row["PacienteId"]),
+                    DNI = row["DNI"] == DBNull.Value ? "" : row["DNI"].ToString(),
+                    Apellido = row["Apellido"]?.ToString(),
+                    Nombre = row["Nombre"]?.ToString(),
+                    Email = row["Email"] == DBNull.Value ? "" : row["Email"].ToString(),
+                    ObraSocial = row["ObraSocial"] == DBNull.Value ? "" : row["ObraSocial"].ToString(),
+                    Observaciones = row["Observaciones"] == DBNull.Value ? "" : row["Observaciones"].ToString()
                 })
                 .ToList();
 
-            dgvPacientes.DataSource = null;
             //dgvPacientes.DataSource = TrabajarPaciente.listar_pacientes();
-            dgvPacientes.DataSource = vistaTabla;
+            //dgvPacientes.DataSource = null;
+            BindingSource bs = new BindingSource();
+            bs.DataSource = vistaTabla;
+
+            dgvPacientes.AutoGenerateColumns = true;
+            //dgvPacientes.ColumnHeadersVisible = true;
+            //dgvPacientes.DataSource = vistaTabla;
+            dgvPacientes.DataSource = bs;
+
+            dgvPacientes.Columns["Id"].HeaderText = "ID";
             //dgvPacientes.Columns["PacienteId"].Visible = false;
+            dgvPacientes.Columns["DNI"].HeaderText = "DNI";
+            dgvPacientes.Columns["Apellido"].HeaderText = "Apellido";
+            dgvPacientes.Columns["Nombre"].HeaderText = "Nombre";
+            dgvPacientes.Columns["Email"].HeaderText = "Correo Electronico";
+            dgvPacientes.Columns["ObraSocial"].HeaderText = "Obra Social";
+            dgvPacientes.Columns["Observaciones"].HeaderText = "Observaciones";
         }
         private void FrmPacientes_Shown(object sender, EventArgs e)
         {
@@ -74,6 +88,7 @@ namespace Vistas
 
             FrmPacienteAgregar oFrmPacienteAgregar = new FrmPacienteAgregar(idPaciente);
             oFrmPacienteAgregar.ShowDialog();
+            load_pacientes();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -93,7 +108,7 @@ namespace Vistas
             if (dgvPacientes.CurrentRow != null)
             {
                 //Obtener el valor de la celda que contiene el ID del Paciente
-                return Convert.ToInt32(dgvPacientes.CurrentRow.Cells["PacienteId"].Value);
+                return Convert.ToInt32(dgvPacientes.CurrentRow.Cells["Id"].Value);
             }
             else
             {

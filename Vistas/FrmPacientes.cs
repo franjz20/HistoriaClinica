@@ -28,8 +28,26 @@ namespace Vistas
         }
         private void load_pacientes()
         {
+
+            var tablaDatos = TrabajarPaciente.listar_pacientes();
+
+            var vistaTabla = tablaDatos.AsEnumerable()
+                .Select(row => new
+                {
+                    Id = row["PacienteId"],
+                    DNI = row["DNI"],
+                    Apellido = row["Apellido"],
+                    Nombre = row["Nombre"],
+                    Email = row["Email"],
+                    ObraSocial = row["ObraSocial"],
+                    Observaciones = row["Observaciones"]
+                })
+                .ToList();
+
             dgvPacientes.DataSource = null;
-            dgvPacientes.DataSource = TrabajarPaciente.listar_pacientes();
+            //dgvPacientes.DataSource = TrabajarPaciente.listar_pacientes();
+            dgvPacientes.DataSource = vistaTabla;
+            //dgvPacientes.Columns["PacienteId"].Visible = false;
         }
         private void FrmPacientes_Shown(object sender, EventArgs e)
         {

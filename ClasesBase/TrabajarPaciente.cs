@@ -41,8 +41,8 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(connectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Pacientes (Nombre, Apellido, DNI, FechaNacimiento, Direccion, Telefono, Email, ObraSocial, NumeroAfiliado, Observaciones) " +
-                              "VALUES (@nombre, @apellido, @dni, @fechaNacimiento, @direccion, @telefono, @email, @obraSocial, @numeroAfiliado, @observaciones)";
+            cmd.CommandText = "INSERT INTO Pacientes (Nombre, Apellido, DNI, FechaNacimiento, Genero, Direccion, Telefono, Email, ObraSocial, NumeroAfiliado, Observaciones) " +
+                              "VALUES (@nombre, @apellido, @dni, @fechaNacimiento, @genero, @direccion, @telefono, @email, @obraSocial, @numeroAfiliado, @observaciones)";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -50,6 +50,7 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@apellido", paciente.Paciente_Apellido);
             cmd.Parameters.AddWithValue("@dni", paciente.Paciente_Dni);
             cmd.Parameters.AddWithValue("@fechaNacimiento", paciente.Paciente_FechaNacimiento);
+            cmd.Parameters.AddWithValue("@genero", paciente.Paciente_Genero);
             cmd.Parameters.AddWithValue("@direccion", paciente.Paciente_Direccion);
             cmd.Parameters.AddWithValue("@telefono", paciente.Paciente_Telefono);
             cmd.Parameters.AddWithValue("@email", paciente.Paciente_Email);
@@ -67,7 +68,7 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(connectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Pacientes SET Nombre=@nombre, Apellido=@apellido, DNI=@dni, FechaNacimiento=@fechaNacimiento, " +
+            cmd.CommandText = "UPDATE Pacientes SET Nombre=@nombre, Apellido=@apellido, DNI=@dni, FechaNacimiento=@fechaNacimiento, Genero=@genero" +
                               "Direccion=@direccion, Telefono=@telefono, Email=@email, ObraSocial=@obraSocial, NumeroAfiliado=@numeroAfiliado, Observaciones=@observaciones " +
                               "WHERE PacienteId=@pacienteId";
 
@@ -78,6 +79,7 @@ namespace ClasesBase
             cmd.Parameters.AddWithValue("@apellido", paciente.Paciente_Apellido);
             cmd.Parameters.AddWithValue("@dni", paciente.Paciente_Dni);
             cmd.Parameters.AddWithValue("@fechaNacimiento", paciente.Paciente_FechaNacimiento);
+            cmd.Parameters.AddWithValue("@genero", paciente.Paciente_Genero);
             cmd.Parameters.AddWithValue("@direccion", paciente.Paciente_Direccion);
             cmd.Parameters.AddWithValue("@telefono", paciente.Paciente_Telefono);
             cmd.Parameters.AddWithValue("@email", paciente.Paciente_Email);
@@ -98,7 +100,7 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             
-            cmd.CommandText = "DELETE FROM Pacientes WHERE Paciente_Id=@pacienteId";
+            cmd.CommandText = "DELETE FROM Pacientes WHERE PacienteId=@pacienteId";
             
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;

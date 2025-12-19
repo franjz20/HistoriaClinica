@@ -137,50 +137,25 @@ namespace Vistas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            buscar_pacientes(txtBuscar.Text);
+            buscar_pacientes();
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            buscar_pacientes(txtBuscar.Text);
+            buscar_pacientes();
         }
 
-        private void buscar_pacientes(string criterio) 
+        private void buscar_pacientes() 
         {
-            DataTable listaTabla = TrabajarPaciente.listar_pacientes();
+            string busqueda = txtBuscar.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(criterio))
+            if (string.IsNullOrEmpty(busqueda))
             {
                 load_pacientes();
                 return;
             }
 
-            criterio = criterio.ToLower();
-
-            var resultado = listaTabla.AsEnumerable()
-                .Where(row =>
-                    //Busca DNI en partes o completo
-                    row["DNI"] != DBNull.Value && row["DNI"].ToString().Contains(criterio) ||
-
-                    //Busca Apellido en partes o completo
-                    row["Apellido"] != DBNull.Value && row["Apellido"].ToString().ToLower().Contains(criterio) ||
-
-                    //Buscar Nombre en partes o completo
-                    row["Nombre"] != DBNull.Value && row["Nombre"].ToString().ToLower().Contains(criterio)
-                )
-                .Select(row => new
-                {
-                    Id = Convert.ToInt32(row["PacienteId"]),
-                    DNI = row["DNI"]?.ToString(),
-                    Apellido = row["Apellido"]?.ToString(),
-                    Nombre = row["Nombre"]?.ToString(),
-                    Email = row["Email"]?.ToString(),
-                    ObraSocial = row["ObraSocial"]?.ToString(),
-                    Observaciones = row["Observaciones"]?.ToString()
-                })
-                .ToList();
-
             dgvPacientes.DataSource = null;
-            dgvPacientes.DataSource = resultado;
+            dgvPacientes.DataSource = TrabajarPaciente.buscar_pacientes(busqueda);
         }
 
     }

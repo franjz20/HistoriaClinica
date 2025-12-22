@@ -141,7 +141,18 @@ namespace Vistas
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            buscar_pacientes();
+            
+            string busqueda = txtBuscar.Text.Trim();
+
+            if (busqueda.Length < 2) 
+            {
+                load_pacientes();
+                return;
+            }
+            else
+            {
+                buscar_pacientes();
+            }
         }
 
         private void buscar_pacientes() 

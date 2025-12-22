@@ -91,7 +91,8 @@ namespace ClasesBase
 
             cnn.Open();
             cmd.ExecuteNonQuery();
-            cnn.Close();
+            cnn.Close(); 
+            Console.WriteLine("Paciente modificado correctamente.");
         }
 
         public static void eliminar_paciente(Paciente paciente)

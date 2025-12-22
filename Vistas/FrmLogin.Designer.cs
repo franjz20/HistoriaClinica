@@ -34,9 +34,9 @@
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseñaUsuario = new System.Windows.Forms.TextBox();
             this.panelContenedorCard = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelContenedorCard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.label1.Location = new System.Drawing.Point(73, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(73, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario ";
             // 
@@ -72,7 +72,7 @@
             this.label2.Location = new System.Drawing.Point(73, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 17);
+            this.label2.Size = new System.Drawing.Size(102, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña ";
             // 
@@ -83,7 +83,7 @@
             this.txtNombreUsuario.Location = new System.Drawing.Point(76, 78);
             this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(129, 25);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(129, 29);
             this.txtNombreUsuario.TabIndex = 3;
             // 
             // txtContraseñaUsuario
@@ -93,7 +93,7 @@
             this.txtContraseñaUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
             this.txtContraseñaUsuario.PasswordChar = '.';
-            this.txtContraseñaUsuario.Size = new System.Drawing.Size(129, 25);
+            this.txtContraseñaUsuario.Size = new System.Drawing.Size(129, 29);
             this.txtContraseñaUsuario.TabIndex = 4;
             // 
             // panelContenedorCard
@@ -115,28 +115,6 @@
             this.panelContenedorCard.Size = new System.Drawing.Size(307, 298);
             this.panelContenedorCard.TabIndex = 5;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(73, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Ingresá a tu cuenta";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(73, 222);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "¿No tenes cuenta?";
-            // 
             // btnCrearCuenta
             // 
             this.btnCrearCuenta.BackColor = System.Drawing.Color.White;
@@ -153,9 +131,31 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(73, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 23);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "¿No tenes cuenta?";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label3.Location = new System.Drawing.Point(73, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 23);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Ingresá a tu cuenta";
+            // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(331, 322);

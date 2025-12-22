@@ -40,7 +40,7 @@ namespace Vistas
 
         private void btnHistoriaClinica_Click(object sender, EventArgs e)
         {
-            AbrirFormularioPanel(new FrmHistoriasClinicas());
+            AbrirFormularioPanel(new FrmHistoriaClinicaAgregar());
         }
 
         private void btnTurnos_Click(object sender, EventArgs e)

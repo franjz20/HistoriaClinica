@@ -91,7 +91,8 @@ namespace ClasesBase
 
             cnn.Open();
             cmd.ExecuteNonQuery();
-            cnn.Close();
+            cnn.Close(); 
+            Console.WriteLine("Paciente modificado correctamente.");
         }
 
         public static void eliminar_paciente(Paciente paciente)
@@ -110,6 +111,27 @@ namespace ClasesBase
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
+        }
+
+        public static DataTable buscar_pacientes(string busqueda)
+        {
+            SqlConnection cnn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "SELECT PacienteId, DNI, Apellido, Nombre, Email, ObraSocial, Observaciones " +
+                              "FROM Pacientes " +
+                              "WHERE Apellido LIKE @filtro OR Nombre LIKE @filtro OR CAST(DNI AS VARCHAR) LIKE @filtro";
+
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@filtro", "%" + busqueda + "%");
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
         }
 
     }

@@ -46,7 +46,7 @@ namespace Vistas
 
             //dgvPacientes.DataSource = TrabajarPaciente.listar_pacientes();
             //dgvPacientes.DataSource = null;
-            BindingSource bs = new BindingSource();
+            BindingSource bs = new BindingSource(); //sirve para manejar mejor los datos en el DataGridView como un intermediario
             bs.DataSource = vistaTabla;
 
             dgvPacientes.AutoGenerateColumns = true;
@@ -59,7 +59,7 @@ namespace Vistas
             dgvPacientes.Columns["DNI"].HeaderText = "DNI";
             dgvPacientes.Columns["Apellido"].HeaderText = "Apellido";
             dgvPacientes.Columns["Nombre"].HeaderText = "Nombre";
-            dgvPacientes.Columns["Email"].HeaderText = "Correo Electronico";
+            dgvPacientes.Columns["Email"].HeaderText = "Email";
             dgvPacientes.Columns["ObraSocial"].HeaderText = "Obra Social";
             dgvPacientes.Columns["Observaciones"].HeaderText = "Observaciones";
         }
@@ -135,20 +135,38 @@ namespace Vistas
             }
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            buscar_pacientes();
+        }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            string filtro = txtBuscar.Text.ToLower();
+            
+            string busqueda = txtBuscar.Text.Trim();
 
-            foreach (DataGridView fila in dgvPacientes.Rows)
+            if (busqueda.Length < 2) 
             {
-                //if (fila.DataBoundItem == null) continue;
+                load_pacientes();
+                return;
+            }
+            else
+            {
+                buscar_pacientes();
+            }
+        }
 
-                //string dni = fila.Cells["DNI"].Value.ToString().ToLower();
-                //string apellido = fila.Cells["Apellido"].Value.ToString().ToLower();
+        private void buscar_pacientes() 
+        {
+            string busqueda = txtBuscar.Text.Trim();
 
-                //fila.Visible = dni.Contains(filtro) || apellido.Contains(filtro);
+            if (string.IsNullOrEmpty(busqueda))
+            {
+                load_pacientes();
+                return;
             }
 
+            dgvPacientes.DataSource = null;
+            dgvPacientes.DataSource = TrabajarPaciente.buscar_pacientes(busqueda);
         }
 
     }

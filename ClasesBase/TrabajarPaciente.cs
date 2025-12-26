@@ -12,8 +12,8 @@ namespace ClasesBase
     public class TrabajarPaciente
     {
         //private static string connectionString =
-                                //"Server=(localdb)\\MSSQLLocalDB;Database=HistoriaClinicaDB;Trusted_Connection=True;";
-        
+        //"Server=(localdb)\\MSSQLLocalDB;Database=HistoriaClinicaDB;Trusted_Connection=True;";
+
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;
                                     AttachDbFilename=|DataDirectory|\BD\HistoriaClinicaDB.mdf;
                                     Integrated Security=True;
@@ -91,7 +91,7 @@ namespace ClasesBase
 
             cnn.Open();
             cmd.ExecuteNonQuery();
-            cnn.Close(); 
+            cnn.Close();
             Console.WriteLine("Paciente modificado correctamente.");
         }
 
@@ -100,9 +100,9 @@ namespace ClasesBase
             SqlConnection cnn = new SqlConnection(connectionString);
 
             SqlCommand cmd = new SqlCommand();
-            
+
             cmd.CommandText = "DELETE FROM Pacientes WHERE PacienteId=@pacienteId";
-            
+
             cmd.CommandType = CommandType.Text;
             cmd.Connection = cnn;
 
@@ -132,6 +132,43 @@ namespace ClasesBase
             da.Fill(dt);
 
             return dt;
+        } 
+
+        public static Paciente ObtenerPacientePorId(int pacienteId)
+        {
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Pacientes WHERE PacienteId=@pacienteId";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@pacienteId", pacienteId);
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+               Paciente paciente = new Paciente();
+                {
+                    paciente.Paciente_Nombre = reader["Nombre"].ToString();
+                    paciente.Paciente_Apellido = reader["Apellido"].ToString();
+                    paciente.Paciente_FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"]);
+                    paciente.Paciente_Dni = Convert.ToInt32(reader["DNI"]);
+                    paciente.Paciente_Genero = reader["Genero"].ToString();
+                    paciente.Paciente_Direccion = reader["Direccion"].ToString();
+                    paciente.Paciente_Telefono = Convert.ToInt32(reader["Telefono"]);
+                    paciente.Paciente_Email = reader["Email"].ToString();
+                    paciente.Paciente_ObraSocial = reader["ObraSocial"].ToString();
+                    paciente.Paciente_NumeroAfiliado = Convert.ToInt32(reader["NumeroAfiliado"]);
+                    cnn.Close();
+
+                }
+                return paciente;
+
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
     }

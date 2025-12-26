@@ -55,19 +55,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.lblCiudad = new System.Windows.Forms.Label();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblFechaNac = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblnroTel = new System.Windows.Forms.Label();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblObraSocial = new System.Windows.Forms.Label();
+            this.lblAfiliado = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -116,7 +114,13 @@
             this.richTextBox1.Size = new System.Drawing.Size(1076, 183);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "";
-     
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 29;
             // 
             // label7
             // 
@@ -229,9 +233,14 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Limpiar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
-        
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 28;
             // 
             // button3
             // 
@@ -300,131 +309,19 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lblCiudad);
+            this.groupBox2.Controls.Add(this.lblEdad);
+            this.groupBox2.Controls.Add(this.lblFechaNac);
+            this.groupBox2.Controls.Add(this.lblDni);
+            this.groupBox2.Controls.Add(this.lblnroTel);
+            this.groupBox2.Controls.Add(this.lblDomicilio);
+            this.groupBox2.Controls.Add(this.lblNombre);
             this.groupBox2.Location = new System.Drawing.Point(346, 17);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(406, 122);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Pacientes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Facundo Abel Rocabado";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Domicilio :Mza 15 Lote 2 B Soledad";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 71);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(179, 16);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Nro de telefono: 3888-532869";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 87);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 16);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Dni : XXXXXXXX";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 103);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(194, 16);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Fecha de Nacimiento : 10/10/10";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(249, 103);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(96, 16);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Edad: XX Años";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Location = new System.Drawing.Point(778, 17);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(336, 122);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Obra Social";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 70);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(99, 16);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Monto Pagado:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 54);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(79, 16);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Token : XXX";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(7, 38);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(99, 16);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Plan : XXXXXXX";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(7, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(76, 16);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Nro: XXXX x";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(7, 55);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 16);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Ciudad:";
             // 
             // label20
             // 
@@ -434,6 +331,98 @@
             this.label20.Size = new System.Drawing.Size(66, 16);
             this.label20.TabIndex = 7;
             this.label20.Text = "Provincia:";
+            // 
+            // lblCiudad
+            // 
+            this.lblCiudad.AutoSize = true;
+            this.lblCiudad.Location = new System.Drawing.Point(7, 55);
+            this.lblCiudad.Name = "lblCiudad";
+            this.lblCiudad.Size = new System.Drawing.Size(53, 16);
+            this.lblCiudad.TabIndex = 6;
+            this.lblCiudad.Text = "Ciudad:";
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(249, 103);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(96, 16);
+            this.lblEdad.TabIndex = 5;
+            this.lblEdad.Text = "Edad: XX Años";
+            // 
+            // lblFechaNac
+            // 
+            this.lblFechaNac.AutoSize = true;
+            this.lblFechaNac.Location = new System.Drawing.Point(6, 103);
+            this.lblFechaNac.Name = "lblFechaNac";
+            this.lblFechaNac.Size = new System.Drawing.Size(194, 16);
+            this.lblFechaNac.TabIndex = 4;
+            this.lblFechaNac.Text = "Fecha de Nacimiento : 10/10/10";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(6, 87);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(100, 16);
+            this.lblDni.TabIndex = 3;
+            this.lblDni.Text = "Dni : XXXXXXXX";
+            // 
+            // lblnroTel
+            // 
+            this.lblnroTel.AutoSize = true;
+            this.lblnroTel.Location = new System.Drawing.Point(7, 71);
+            this.lblnroTel.Name = "lblnroTel";
+            this.lblnroTel.Size = new System.Drawing.Size(179, 16);
+            this.lblnroTel.TabIndex = 2;
+            this.lblnroTel.Text = "Nro de telefono: 3888-532869";
+            // 
+            // lblDomicilio
+            // 
+            this.lblDomicilio.AutoSize = true;
+            this.lblDomicilio.Location = new System.Drawing.Point(7, 38);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(217, 16);
+            this.lblDomicilio.TabIndex = 1;
+            this.lblDomicilio.Text = "Domicilio :Mza 15 Lote 2 B Soledad";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(7, 22);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(159, 16);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Facundo Abel Rocabado";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblObraSocial);
+            this.groupBox3.Controls.Add(this.lblAfiliado);
+            this.groupBox3.Location = new System.Drawing.Point(778, 17);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(336, 122);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Obra Social";
+            // 
+            // lblObraSocial
+            // 
+            this.lblObraSocial.AutoSize = true;
+            this.lblObraSocial.Location = new System.Drawing.Point(6, 29);
+            this.lblObraSocial.Name = "lblObraSocial";
+            this.lblObraSocial.Size = new System.Drawing.Size(99, 16);
+            this.lblObraSocial.TabIndex = 1;
+            this.lblObraSocial.Text = "Plan : XXXXXXX";
+            // 
+            // lblAfiliado
+            // 
+            this.lblAfiliado.AutoSize = true;
+            this.lblAfiliado.Location = new System.Drawing.Point(6, 55);
+            this.lblAfiliado.Name = "lblAfiliado";
+            this.lblAfiliado.Size = new System.Drawing.Size(76, 16);
+            this.lblAfiliado.TabIndex = 0;
+            this.lblAfiliado.Text = "Nro: XXXX x";
             // 
             // FrmHistoriaClinicaAgregar
             // 
@@ -499,18 +488,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.Label lblFechaNac;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.Label lblnroTel;
+        private System.Windows.Forms.Label lblDomicilio;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblObraSocial;
+        private System.Windows.Forms.Label lblAfiliado;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblCiudad;
     }
 }

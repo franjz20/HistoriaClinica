@@ -51,7 +51,7 @@
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 29);
-            this.btnIngresar.TabIndex = 0;
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -84,7 +84,7 @@
             this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(129, 29);
-            this.txtNombreUsuario.TabIndex = 3;
+            this.txtNombreUsuario.TabIndex = 0;
             // 
             // txtContraseñaUsuario
             // 
@@ -94,7 +94,7 @@
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
             this.txtContraseñaUsuario.PasswordChar = '.';
             this.txtContraseñaUsuario.Size = new System.Drawing.Size(129, 29);
-            this.txtContraseñaUsuario.TabIndex = 4;
+            this.txtContraseñaUsuario.TabIndex = 1;
             // 
             // panelContenedorCard
             // 
@@ -155,6 +155,7 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;

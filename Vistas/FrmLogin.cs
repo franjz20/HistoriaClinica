@@ -16,6 +16,7 @@ namespace Vistas
     {
         public FrmLogin()
         {
+          
             InitializeComponent();
         }
 
@@ -58,5 +59,7 @@ namespace Vistas
             FrmUsuario oFrmUsuario = new FrmUsuario();
             oFrmUsuario.Show();
         }
+
+
     }
 }

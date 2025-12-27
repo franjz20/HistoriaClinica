@@ -43,6 +43,7 @@
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelTitulo.SuspendLayout();
             this.panelAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
@@ -85,6 +86,7 @@
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.Color.White;
+            this.panelAcciones.Controls.Add(this.button1);
             this.panelAcciones.Controls.Add(this.lblAcciones);
             this.panelAcciones.Controls.Add(this.btnAgregar);
             this.panelAcciones.Controls.Add(this.btnModificar);
@@ -226,6 +228,21 @@
             this.lblBuscar.TabIndex = 17;
             this.lblBuscar.Text = "Buscar (DNI o Apellido) : ";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(724, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 30);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Agregar historia clinica";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,5 +286,6 @@
         private System.Windows.Forms.Panel panelBusqueda;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.Button button1;
     }
 }

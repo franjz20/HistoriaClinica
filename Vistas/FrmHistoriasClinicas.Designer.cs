@@ -34,11 +34,8 @@
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.lblTituloHistoriasClinicas = new System.Windows.Forms.Label();
             this.dgvHistoriasClinicas = new System.Windows.Forms.DataGridView();
-            this.panelAcciones = new System.Windows.Forms.Panel();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoriasClinicas)).BeginInit();
-            this.panelAcciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -94,40 +91,14 @@
             this.dgvHistoriasClinicas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistoriasClinicas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHistoriasClinicas.EnableHeadersVisualStyles = false;
-            this.dgvHistoriasClinicas.Location = new System.Drawing.Point(0, 103);
+            this.dgvHistoriasClinicas.Location = new System.Drawing.Point(0, 50);
             this.dgvHistoriasClinicas.MultiSelect = false;
             this.dgvHistoriasClinicas.Name = "dgvHistoriasClinicas";
             this.dgvHistoriasClinicas.ReadOnly = true;
             this.dgvHistoriasClinicas.RowHeadersVisible = false;
             this.dgvHistoriasClinicas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistoriasClinicas.Size = new System.Drawing.Size(964, 498);
+            this.dgvHistoriasClinicas.Size = new System.Drawing.Size(964, 551);
             this.dgvHistoriasClinicas.TabIndex = 3;
-            // 
-            // panelAcciones
-            // 
-            this.panelAcciones.BackColor = System.Drawing.Color.White;
-            this.panelAcciones.Controls.Add(this.btnAgregar);
-            this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAcciones.Location = new System.Drawing.Point(0, 50);
-            this.panelAcciones.Name = "panelAcciones";
-            this.panelAcciones.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.panelAcciones.Size = new System.Drawing.Size(964, 53);
-            this.panelAcciones.TabIndex = 4;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(25, 17);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(161, 30);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar historia clinica";
-            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // FrmHistoriasClinicas
             // 
@@ -135,7 +106,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 601);
             this.Controls.Add(this.dgvHistoriasClinicas);
-            this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.panelTitulo);
             this.Name = "FrmHistoriasClinicas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -144,7 +114,6 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoriasClinicas)).EndInit();
-            this.panelAcciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -155,7 +124,5 @@
         private System.Windows.Forms.Label lblSubTitulo;
         private System.Windows.Forms.Label lblTituloHistoriasClinicas;
         private System.Windows.Forms.DataGridView dgvHistoriasClinicas;
-        private System.Windows.Forms.Panel panelAcciones;
-        private System.Windows.Forms.Button btnAgregar;
     }
 }

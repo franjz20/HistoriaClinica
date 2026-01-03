@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.lblTituloPacientes = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.panelBusqueda = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.btnHistoriaClinica = new System.Windows.Forms.Button();
             this.panelTitulo.SuspendLayout();
             this.panelAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
@@ -85,6 +86,7 @@
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.Color.White;
+            this.panelAcciones.Controls.Add(this.btnHistoriaClinica);
             this.panelAcciones.Controls.Add(this.lblAcciones);
             this.panelAcciones.Controls.Add(this.btnAgregar);
             this.panelAcciones.Controls.Add(this.btnModificar);
@@ -170,19 +172,19 @@
             // 
             this.dgvPacientes.AllowUserToAddRows = false;
             this.dgvPacientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvPacientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvPacientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPacientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPacientes.EnableHeadersVisualStyles = false;
@@ -194,6 +196,7 @@
             this.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPacientes.Size = new System.Drawing.Size(964, 426);
             this.dgvPacientes.TabIndex = 2;
+            this.dgvPacientes.SelectionChanged += new System.EventHandler(this.dgvPacientes_SelectionChanged);
             // 
             // panelBusqueda
             // 
@@ -225,6 +228,23 @@
             this.lblBuscar.Size = new System.Drawing.Size(187, 20);
             this.lblBuscar.TabIndex = 17;
             this.lblBuscar.Text = "Buscar (DNI o Apellido) : ";
+            // 
+            // btnHistoriaClinica
+            // 
+            this.btnHistoriaClinica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnHistoriaClinica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHistoriaClinica.Enabled = false;
+            this.btnHistoriaClinica.FlatAppearance.BorderSize = 0;
+            this.btnHistoriaClinica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistoriaClinica.ForeColor = System.Drawing.Color.White;
+            this.btnHistoriaClinica.Location = new System.Drawing.Point(467, 35);
+            this.btnHistoriaClinica.Name = "btnHistoriaClinica";
+            this.btnHistoriaClinica.Size = new System.Drawing.Size(110, 30);
+            this.btnHistoriaClinica.TabIndex = 17;
+            this.btnHistoriaClinica.Text = "Historia Clínica";
+            this.btnHistoriaClinica.UseVisualStyleBackColor = false;
+            this.btnHistoriaClinica.Click += new System.EventHandler(this.btnHistoriaClinica_Click);
             // 
             // FrmPacientes
             // 
@@ -269,5 +289,6 @@
         private System.Windows.Forms.Panel panelBusqueda;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.Button btnHistoriaClinica;
     }
 }

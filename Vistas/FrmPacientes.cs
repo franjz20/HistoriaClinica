@@ -68,6 +68,7 @@ namespace Vistas
             load_pacientes();
         }
 
+        //BOTONES DE ACCIÓN
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmPacienteAgregar oFrmPacienteAgregar = new FrmPacienteAgregar();
@@ -120,6 +121,19 @@ namespace Vistas
             }
             //LimpiarForm(this);
         }
+        private void btnHistoriaClinica_Click(object sender, EventArgs e)
+        {
+            if (dgvPacientes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un paciente para ver su historia clínica.");
+                return;
+            }
+
+            int pacienteId = obtener_PacienteId_Seleccionado();
+
+            FrmHistoriasClinicasAgregar oFrmHistoriaClinica = new FrmHistoriasClinicasAgregar(pacienteId);
+            oFrmHistoriaClinica.ShowDialog();
+        }
 
         //Funciones de ayuda para el manejo del DataGridView
         private int obtener_PacienteId_Seleccionado()
@@ -167,6 +181,13 @@ namespace Vistas
 
             dgvPacientes.DataSource = null;
             dgvPacientes.DataSource = TrabajarPaciente.buscar_pacientes(busqueda);
+        }
+
+        private void dgvPacientes_SelectionChanged(object sender, EventArgs e)
+        {
+            btnModificar.Enabled = dgvPacientes.SelectedRows.Count > 0;
+            btnEliminar.Enabled = dgvPacientes.SelectedRows.Count > 0;
+            btnHistoriaClinica.Enabled = dgvPacientes.SelectedRows.Count > 0;
         }
 
     }

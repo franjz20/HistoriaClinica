@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vistas
 {
-    public partial class FrmHistoriasClinicas : Form
+    public partial class FrmHistoriasClinicasAgregar : Form
     {
-        public FrmHistoriasClinicas()
+        public FrmHistoriasClinicasAgregar()
         {
             InitializeComponent();
         }

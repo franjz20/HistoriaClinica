@@ -35,24 +35,36 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tplFormulario = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnGuardarPaciente = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.tlpFormulario = new System.Windows.Forms.TableLayoutPanel();
+            this.txtTratamiento = new System.Windows.Forms.TextBox();
+            this.lblNumAfiliado = new System.Windows.Forms.Label();
+            this.txtDiagPresuntivo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.txtExploracionFisica = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtSigVitSat = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblGénero = new System.Windows.Forms.Label();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.txtSigVitFC = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtAntecedentes = new System.Windows.Forms.TextBox();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblObraSocial = new System.Windows.Forms.Label();
+            this.txtEstudiosSolicitados = new System.Windows.Forms.TextBox();
+            this.lblObservaciones = new System.Windows.Forms.Label();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.txtMotivoConsulta = new System.Windows.Forms.TextBox();
+            this.dtpFechaConsulta = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaConsulta = new System.Windows.Forms.Label();
+            this.txtSigVitPA = new System.Windows.Forms.TextBox();
+            this.txtSigVitTemp = new System.Windows.Forms.TextBox();
             this.panelTitulo.SuspendLayout();
             this.panelPacienteInfo.SuspendLayout();
-            this.tplFormulario.SuspendLayout();
+            this.tlpFormulario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -133,189 +145,367 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Paciente: Franco Juarez |";
             // 
-            // tplFormulario
+            // btnGuardarPaciente
             // 
-            this.tplFormulario.ColumnCount = 2;
-            this.tplFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.81818F));
-            this.tplFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.18182F));
-            this.tplFormulario.Controls.Add(this.label5, 0, 1);
-            this.tplFormulario.Controls.Add(this.label4, 0, 0);
-            this.tplFormulario.Controls.Add(this.dateTimePicker1, 1, 12);
-            this.tplFormulario.Controls.Add(this.label6, 0, 2);
-            this.tplFormulario.Controls.Add(this.label7, 0, 3);
-            this.tplFormulario.Controls.Add(this.label8, 0, 4);
-            this.tplFormulario.Controls.Add(this.label9, 0, 5);
-            this.tplFormulario.Controls.Add(this.label10, 0, 6);
-            this.tplFormulario.Controls.Add(this.label11, 0, 7);
-            this.tplFormulario.Controls.Add(this.label12, 0, 8);
-            this.tplFormulario.Controls.Add(this.label13, 0, 9);
-            this.tplFormulario.Controls.Add(this.label14, 0, 10);
-            this.tplFormulario.Controls.Add(this.label15, 0, 11);
-            this.tplFormulario.Controls.Add(this.label16, 0, 12);
-            this.tplFormulario.Location = new System.Drawing.Point(12, 136);
-            this.tplFormulario.Name = "tplFormulario";
-            this.tplFormulario.RowCount = 13;
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tplFormulario.Size = new System.Drawing.Size(387, 267);
-            this.tplFormulario.TabIndex = 2;
+            this.btnGuardarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnGuardarPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardarPaciente.FlatAppearance.BorderSize = 0;
+            this.btnGuardarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarPaciente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPaciente.Location = new System.Drawing.Point(166, 616);
+            this.btnGuardarPaciente.Name = "btnGuardarPaciente";
+            this.btnGuardarPaciente.Size = new System.Drawing.Size(110, 30);
+            this.btnGuardarPaciente.TabIndex = 3;
+            this.btnGuardarPaciente.Text = "Guardar";
+            this.btnGuardarPaciente.UseVisualStyleBackColor = false;
+            this.btnGuardarPaciente.Click += new System.EventHandler(this.btnGuardarPaciente_Click);
             // 
-            // label5
+            // btnCancelar
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Motivo consuta :";
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(282, 616);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(110, 30);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // tlpFormulario
+            // 
+            this.tlpFormulario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlpFormulario.ColumnCount = 2;
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tlpFormulario.Controls.Add(this.txtSigVitTemp, 1, 4);
+            this.tlpFormulario.Controls.Add(this.txtSigVitPA, 1, 3);
+            this.tlpFormulario.Controls.Add(this.lblFechaConsulta, 0, 11);
+            this.tlpFormulario.Controls.Add(this.txtTratamiento, 1, 9);
+            this.tlpFormulario.Controls.Add(this.lblNumAfiliado, 0, 9);
+            this.tlpFormulario.Controls.Add(this.txtDiagPresuntivo, 1, 7);
+            this.tlpFormulario.Controls.Add(this.label4, 0, 7);
+            this.tlpFormulario.Controls.Add(this.txtExploracionFisica, 1, 6);
+            this.tlpFormulario.Controls.Add(this.lblDireccion, 0, 6);
+            this.tlpFormulario.Controls.Add(this.txtSigVitSat, 1, 5);
+            this.tlpFormulario.Controls.Add(this.lblTelefono, 0, 5);
+            this.tlpFormulario.Controls.Add(this.lblGénero, 0, 4);
+            this.tlpFormulario.Controls.Add(this.lblFechaNacimiento, 0, 3);
+            this.tlpFormulario.Controls.Add(this.txtSigVitFC, 1, 2);
+            this.tlpFormulario.Controls.Add(this.lblNombre, 0, 2);
+            this.tlpFormulario.Controls.Add(this.txtAntecedentes, 1, 1);
+            this.tlpFormulario.Controls.Add(this.lblApellido, 0, 1);
+            this.tlpFormulario.Controls.Add(this.lblDni, 0, 0);
+            this.tlpFormulario.Controls.Add(this.lblObraSocial, 0, 8);
+            this.tlpFormulario.Controls.Add(this.txtEstudiosSolicitados, 1, 8);
+            this.tlpFormulario.Controls.Add(this.lblObservaciones, 0, 10);
+            this.tlpFormulario.Controls.Add(this.txtObservaciones, 1, 10);
+            this.tlpFormulario.Controls.Add(this.txtMotivoConsulta, 1, 0);
+            this.tlpFormulario.Controls.Add(this.dtpFechaConsulta, 1, 11);
+            this.tlpFormulario.Location = new System.Drawing.Point(0, 133);
+            this.tlpFormulario.Margin = new System.Windows.Forms.Padding(0);
+            this.tlpFormulario.Name = "tlpFormulario";
+            this.tlpFormulario.Padding = new System.Windows.Forms.Padding(10);
+            this.tlpFormulario.RowCount = 13;
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tlpFormulario.Size = new System.Drawing.Size(405, 465);
+            this.tlpFormulario.TabIndex = 6;
+            // 
+            // txtTratamiento
+            // 
+            this.txtTratamiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTratamiento.Location = new System.Drawing.Point(147, 309);
+            this.txtTratamiento.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtTratamiento.MaxLength = 20;
+            this.txtTratamiento.Name = "txtTratamiento";
+            this.txtTratamiento.Size = new System.Drawing.Size(245, 20);
+            this.txtTratamiento.TabIndex = 19;
+            // 
+            // lblNumAfiliado
+            // 
+            this.lblNumAfiliado.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNumAfiliado.AutoSize = true;
+            this.lblNumAfiliado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumAfiliado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNumAfiliado.Location = new System.Drawing.Point(65, 311);
+            this.lblNumAfiliado.Name = "lblNumAfiliado";
+            this.lblNumAfiliado.Size = new System.Drawing.Size(76, 15);
+            this.lblNumAfiliado.TabIndex = 18;
+            this.lblNumAfiliado.Text = "Tratamiento :";
+            // 
+            // txtDiagPresuntivo
+            // 
+            this.txtDiagPresuntivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDiagPresuntivo.Location = new System.Drawing.Point(147, 245);
+            this.txtDiagPresuntivo.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtDiagPresuntivo.MaxLength = 20;
+            this.txtDiagPresuntivo.Name = "txtDiagPresuntivo";
+            this.txtDiagPresuntivo.Size = new System.Drawing.Size(245, 20);
+            this.txtDiagPresuntivo.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 5);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(68, 240);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "DNI de paciente : ";
+            this.label4.Size = new System.Drawing.Size(73, 30);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Diagnostico presuntivo :";
             // 
-            // dateTimePicker1
+            // txtExploracionFisica
             // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(126, 249);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(258, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.txtExploracionFisica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtExploracionFisica.Location = new System.Drawing.Point(147, 213);
+            this.txtExploracionFisica.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtExploracionFisica.MaxLength = 20;
+            this.txtExploracionFisica.Name = "txtExploracionFisica";
+            this.txtExploracionFisica.Size = new System.Drawing.Size(245, 20);
+            this.txtExploracionFisica.TabIndex = 11;
             // 
-            // label6
+            // lblDireccion
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Antecedentes : ";
+            this.lblDireccion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDireccion.Location = new System.Drawing.Point(36, 215);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(105, 15);
+            this.lblDireccion.TabIndex = 10;
+            this.lblDireccion.Text = "Exploracion fisica :";
             // 
-            // label7
+            // txtSigVitSat
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 69);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Signos vitales FC : ";
+            this.txtSigVitSat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSigVitSat.Location = new System.Drawing.Point(147, 181);
+            this.txtSigVitSat.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtSigVitSat.MaxLength = 20;
+            this.txtSigVitSat.Name = "txtSigVitSat";
+            this.txtSigVitSat.Size = new System.Drawing.Size(245, 20);
+            this.txtSigVitSat.TabIndex = 9;
             // 
-            // label8
+            // lblTelefono
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Signos vitales PA : ";
+            this.lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTelefono.Location = new System.Drawing.Point(37, 183);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(104, 15);
+            this.lblTelefono.TabIndex = 8;
+            this.lblTelefono.Text = "Signos Vitales Sat :";
             // 
-            // label9
+            // lblGénero
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 109);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Signos V. Temp : ";
+            this.lblGénero.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblGénero.AutoSize = true;
+            this.lblGénero.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGénero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblGénero.Location = new System.Drawing.Point(24, 151);
+            this.lblGénero.Name = "lblGénero";
+            this.lblGénero.Size = new System.Drawing.Size(117, 15);
+            this.lblGénero.TabIndex = 7;
+            this.lblGénero.Text = "Signos Vitales Temp :";
             // 
-            // label10
+            // lblFechaNacimiento
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(35, 129);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Signos V. SAT : ";
+            this.lblFechaNacimiento.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(39, 119);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(102, 15);
+            this.lblFechaNacimiento.TabIndex = 6;
+            this.lblFechaNacimiento.Text = "Signos Vitales PA :";
             // 
-            // label11
+            // txtSigVitFC
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 149);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Exploración física : ";
+            this.txtSigVitFC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSigVitFC.Location = new System.Drawing.Point(147, 85);
+            this.txtSigVitFC.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtSigVitFC.MaxLength = 20;
+            this.txtSigVitFC.Name = "txtSigVitFC";
+            this.txtSigVitFC.Size = new System.Drawing.Size(245, 20);
+            this.txtSigVitFC.TabIndex = 5;
             // 
-            // label12
+            // lblNombre
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 169);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Diagnostico pres. : ";
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNombre.Location = new System.Drawing.Point(39, 87);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(102, 15);
+            this.lblNombre.TabIndex = 4;
+            this.lblNombre.Text = "Signos Vitales FC :";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label13
+            // txtAntecedentes
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 189);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Estudios solicitados : ";
+            this.txtAntecedentes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAntecedentes.Location = new System.Drawing.Point(147, 53);
+            this.txtAntecedentes.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtAntecedentes.MaxLength = 20;
+            this.txtAntecedentes.Name = "txtAntecedentes";
+            this.txtAntecedentes.Size = new System.Drawing.Size(245, 20);
+            this.txtAntecedentes.TabIndex = 3;
             // 
-            // label14
+            // lblApellido
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(48, 209);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 13);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Tratamiento : ";
+            this.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblApellido.Location = new System.Drawing.Point(56, 55);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(85, 15);
+            this.lblApellido.TabIndex = 2;
+            this.lblApellido.Text = "Antecedentes :";
+            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label15
+            // lblDni
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(33, 229);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 13);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Observaciones : ";
+            this.lblDni.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDni.AutoSize = true;
+            this.lblDni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDni.Location = new System.Drawing.Point(42, 21);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(99, 15);
+            this.lblDni.TabIndex = 1;
+            this.lblDni.Text = "Motivo consulta :";
+            this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label16
+            // lblObraSocial
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(16, 250);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 13);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "Fecha de consulta : ";
+            this.lblObraSocial.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblObraSocial.AutoSize = true;
+            this.lblObraSocial.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObraSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblObraSocial.Location = new System.Drawing.Point(25, 279);
+            this.lblObraSocial.Name = "lblObraSocial";
+            this.lblObraSocial.Size = new System.Drawing.Size(116, 15);
+            this.lblObraSocial.TabIndex = 12;
+            this.lblObraSocial.Text = "Estudios solicitados :";
+            // 
+            // txtEstudiosSolicitados
+            // 
+            this.txtEstudiosSolicitados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEstudiosSolicitados.Location = new System.Drawing.Point(147, 277);
+            this.txtEstudiosSolicitados.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtEstudiosSolicitados.MaxLength = 20;
+            this.txtEstudiosSolicitados.Name = "txtEstudiosSolicitados";
+            this.txtEstudiosSolicitados.Size = new System.Drawing.Size(245, 20);
+            this.txtEstudiosSolicitados.TabIndex = 13;
+            // 
+            // lblObservaciones
+            // 
+            this.lblObservaciones.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblObservaciones.AutoSize = true;
+            this.lblObservaciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblObservaciones.Location = new System.Drawing.Point(51, 372);
+            this.lblObservaciones.Name = "lblObservaciones";
+            this.lblObservaciones.Size = new System.Drawing.Size(90, 15);
+            this.lblObservaciones.TabIndex = 14;
+            this.lblObservaciones.Text = "Observaciones :";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtObservaciones.Location = new System.Drawing.Point(147, 338);
+            this.txtObservaciones.MaxLength = 300;
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtObservaciones.Size = new System.Drawing.Size(245, 80);
+            this.txtObservaciones.TabIndex = 15;
+            // 
+            // txtMotivoConsulta
+            // 
+            this.txtMotivoConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMotivoConsulta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotivoConsulta.Location = new System.Drawing.Point(147, 16);
+            this.txtMotivoConsulta.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtMotivoConsulta.MaxLength = 20;
+            this.txtMotivoConsulta.Name = "txtMotivoConsulta";
+            this.txtMotivoConsulta.Size = new System.Drawing.Size(245, 25);
+            this.txtMotivoConsulta.TabIndex = 1;
+            // 
+            // dtpFechaConsulta
+            // 
+            this.dtpFechaConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtpFechaConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaConsulta.Location = new System.Drawing.Point(147, 427);
+            this.dtpFechaConsulta.Name = "dtpFechaConsulta";
+            this.dtpFechaConsulta.Size = new System.Drawing.Size(245, 20);
+            this.dtpFechaConsulta.TabIndex = 21;
+            // 
+            // lblFechaConsulta
+            // 
+            this.lblFechaConsulta.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblFechaConsulta.AutoSize = true;
+            this.lblFechaConsulta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFechaConsulta.Location = new System.Drawing.Point(52, 430);
+            this.lblFechaConsulta.Name = "lblFechaConsulta";
+            this.lblFechaConsulta.Size = new System.Drawing.Size(89, 15);
+            this.lblFechaConsulta.TabIndex = 22;
+            this.lblFechaConsulta.Text = "Fecha consulta:";
+            // 
+            // txtSigVitPA
+            // 
+            this.txtSigVitPA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSigVitPA.Location = new System.Drawing.Point(147, 117);
+            this.txtSigVitPA.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtSigVitPA.MaxLength = 20;
+            this.txtSigVitPA.Name = "txtSigVitPA";
+            this.txtSigVitPA.Size = new System.Drawing.Size(245, 20);
+            this.txtSigVitPA.TabIndex = 23;
+            // 
+            // txtSigVitTemp
+            // 
+            this.txtSigVitTemp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSigVitTemp.Location = new System.Drawing.Point(147, 149);
+            this.txtSigVitTemp.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.txtSigVitTemp.MaxLength = 20;
+            this.txtSigVitTemp.Name = "txtSigVitTemp";
+            this.txtSigVitTemp.Size = new System.Drawing.Size(245, 20);
+            this.txtSigVitTemp.TabIndex = 24;
             // 
             // FrmHistoriasClinicasAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 475);
-            this.Controls.Add(this.tplFormulario);
+            this.ClientSize = new System.Drawing.Size(411, 672);
+            this.Controls.Add(this.tlpFormulario);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardarPaciente);
             this.Controls.Add(this.panelPacienteInfo);
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -328,8 +518,8 @@
             this.panelTitulo.PerformLayout();
             this.panelPacienteInfo.ResumeLayout(false);
             this.panelPacienteInfo.PerformLayout();
-            this.tplFormulario.ResumeLayout(false);
-            this.tplFormulario.PerformLayout();
+            this.tlpFormulario.ResumeLayout(false);
+            this.tlpFormulario.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -343,20 +533,32 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tplFormulario;
+        private System.Windows.Forms.Button btnGuardarPaciente;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TableLayoutPanel tlpFormulario;
+        private System.Windows.Forms.TextBox txtTratamiento;
+        private System.Windows.Forms.Label lblNumAfiliado;
+        private System.Windows.Forms.TextBox txtDiagPresuntivo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtExploracionFisica;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.TextBox txtSigVitSat;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblGénero;
+        private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.TextBox txtSigVitFC;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtAntecedentes;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.Label lblObraSocial;
+        private System.Windows.Forms.TextBox txtEstudiosSolicitados;
+        private System.Windows.Forms.Label lblObservaciones;
+        private System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.TextBox txtMotivoConsulta;
+        private System.Windows.Forms.Label lblFechaConsulta;
+        private System.Windows.Forms.DateTimePicker dtpFechaConsulta;
+        private System.Windows.Forms.TextBox txtSigVitTemp;
+        private System.Windows.Forms.TextBox txtSigVitPA;
     }
 }

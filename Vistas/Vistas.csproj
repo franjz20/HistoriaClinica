@@ -75,10 +75,6 @@
     <Compile Include="FrmHistoriasClinicas.Designer.cs">
       <DependentUpon>FrmHistoriasClinicas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHistoriasClinicasAgregar.cs" />
-    <Compile Include="FrmHistoriasClinicasAgregar.Designer.cs">
-      <DependentUpon>FrmHistoriasClinicasAgregar.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPacienteAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,9 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHistoriasClinicas.resx">
       <DependentUpon>FrmHistoriasClinicas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmHistoriasClinicasAgregar.resx">
-      <DependentUpon>FrmHistoriasClinicasAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPacienteAgregar.resx">
       <DependentUpon>FrmPacienteAgregar.cs</DependentUpon>

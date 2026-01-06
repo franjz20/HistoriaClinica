@@ -17,23 +17,28 @@ namespace ClasesBase
                                     Connect Timeout=30;";
 
 
-        public static DataTable listar_historias_clinicas()
+        public static DataTable listar_HC_porPaciente(int pacienteId)
         {
             SqlConnection cnn = new SqlConnection(connectionString);
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT hc.Fecha_Consulta, hc.Motivo_Consulta, hc.Diagnostico_Presuntivo, " +
-                              "p.Nombre + ' ' + p.Apellido as Nombre_Completo, p.DNI, DATEDIFF(YEAR, p.FechaNacimiento, GETDATE()) as Edad " +
-                              "FROM Historias_Clinicas hc " +
-                              "INNER JOIN Pacientes p ON hc.Paciente_Id = p.PacienteId " +
-                              "ORDER BY hc.Fecha_Consulta DESC";
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = cnn;
+            //cmd.CommandText = "SELECT hc.Fecha_Consulta, hc.Motivo_Consulta, hc.Diagnostico_Presuntivo, " +
+            //                  "p.Nombre + ' ' + p.Apellido as Nombre_Completo, p.DNI, DATEDIFF(YEAR, p.FechaNacimiento, GETDATE()) as Edad " +
+            //                  "FROM Historias_Clinicas hc " +
+            //                  "INNER JOIN Pacientes p ON hc.Paciente_Id = p.PacienteId " +
+            //                  "ORDER BY hc.Fecha_Consulta DESC";
+
+            cmd.CommandText = "SELECT HC_Id, Fecha_Consulta, Motivo_Consulta, Diagnostico_Presuntivo, Observaciones " +
+                              "FROM Historias_Clinicas " +
+                              "Where Paciente_Id = @pacienteId "+
+                              "ORDER BY Fecha_Consulta DESC";
+
+            cmd.Parameters.AddWithValue("@pacienteId", pacienteId);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             da.Fill(dt);
+
             return dt;
         }
     }

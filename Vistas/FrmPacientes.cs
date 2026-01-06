@@ -169,5 +169,13 @@ namespace Vistas
             dgvPacientes.DataSource = TrabajarPaciente.buscar_pacientes(busqueda);
         }
 
+        private void dgvPacientes_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvPacientes.CurrentRow == null)
+                return;
+
+            int idPaciente = obtener_PacienteId_Seleccionado();
+            dgvHistoriasClinicas.DataSource = TrabajarHistoriasClinicas.listar_HC_porPaciente(idPaciente);
+        }
     }
 }

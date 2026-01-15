@@ -30,13 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.lblTituloPacientes = new System.Windows.Forms.Label();
             this.panelAcciones = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblAcciones = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -47,13 +44,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvHistoriasClinicas = new System.Windows.Forms.DataGridView();
             this.panelTitulo.SuspendLayout();
             this.panelAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.panelBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoriasClinicas)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -63,8 +57,9 @@
             this.panelTitulo.Controls.Add(this.lblTituloPacientes);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(964, 50);
+            this.panelTitulo.Size = new System.Drawing.Size(1285, 62);
             this.panelTitulo.TabIndex = 0;
             // 
             // lblSubTitulo
@@ -72,9 +67,10 @@
             this.lblSubTitulo.AutoSize = true;
             this.lblSubTitulo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTitulo.ForeColor = System.Drawing.Color.LightGray;
-            this.lblSubTitulo.Location = new System.Drawing.Point(247, 22);
+            this.lblSubTitulo.Location = new System.Drawing.Point(329, 27);
+            this.lblSubTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubTitulo.Name = "lblSubTitulo";
-            this.lblSubTitulo.Size = new System.Drawing.Size(148, 15);
+            this.lblSubTitulo.Size = new System.Drawing.Size(183, 20);
             this.lblSubTitulo.TabIndex = 15;
             this.lblSubTitulo.Text = "Pacientes / Alta y Consulta";
             // 
@@ -83,50 +79,37 @@
             this.lblTituloPacientes.AutoSize = true;
             this.lblTituloPacientes.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloPacientes.ForeColor = System.Drawing.Color.White;
-            this.lblTituloPacientes.Location = new System.Drawing.Point(20, 10);
+            this.lblTituloPacientes.Location = new System.Drawing.Point(27, 12);
+            this.lblTituloPacientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloPacientes.Name = "lblTituloPacientes";
-            this.lblTituloPacientes.Size = new System.Drawing.Size(215, 30);
+            this.lblTituloPacientes.Size = new System.Drawing.Size(282, 37);
             this.lblTituloPacientes.TabIndex = 0;
             this.lblTituloPacientes.Text = "Gestión de Pacientes";
             // 
             // panelAcciones
             // 
             this.panelAcciones.BackColor = System.Drawing.Color.White;
-            this.panelAcciones.Controls.Add(this.button1);
             this.panelAcciones.Controls.Add(this.lblAcciones);
             this.panelAcciones.Controls.Add(this.btnAgregar);
             this.panelAcciones.Controls.Add(this.btnModificar);
             this.panelAcciones.Controls.Add(this.btnEliminar);
             this.panelAcciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAcciones.Location = new System.Drawing.Point(0, 50);
+            this.panelAcciones.Location = new System.Drawing.Point(0, 62);
+            this.panelAcciones.Margin = new System.Windows.Forms.Padding(4);
             this.panelAcciones.Name = "panelAcciones";
-            this.panelAcciones.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.panelAcciones.Size = new System.Drawing.Size(964, 80);
+            this.panelAcciones.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.panelAcciones.Size = new System.Drawing.Size(1285, 98);
             this.panelAcciones.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(724, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 30);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Agregar historia clinica";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // lblAcciones
             // 
             this.lblAcciones.AutoSize = true;
             this.lblAcciones.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcciones.ForeColor = System.Drawing.Color.Black;
-            this.lblAcciones.Location = new System.Drawing.Point(10, 10);
+            this.lblAcciones.Location = new System.Drawing.Point(13, 12);
+            this.lblAcciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAcciones.Name = "lblAcciones";
-            this.lblAcciones.Size = new System.Drawing.Size(137, 20);
+            this.lblAcciones.Size = new System.Drawing.Size(172, 25);
             this.lblAcciones.TabIndex = 16;
             this.lblAcciones.Text = "¿Qué desea hacer?";
             // 
@@ -138,9 +121,10 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(10, 35);
+            this.btnAgregar.Location = new System.Drawing.Point(13, 43);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(110, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(147, 37);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -154,9 +138,10 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(130, 35);
+            this.btnModificar.Location = new System.Drawing.Point(173, 43);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(110, 30);
+            this.btnModificar.Size = new System.Drawing.Size(147, 37);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -170,9 +155,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(250, 35);
+            this.btnEliminar.Location = new System.Drawing.Point(333, 43);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(110, 30);
+            this.btnEliminar.Size = new System.Drawing.Size(147, 37);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -180,9 +166,10 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(467, 9);
+            this.btnBuscar.Location = new System.Drawing.Point(623, 11);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(63, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(84, 28);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -208,15 +195,17 @@
             this.dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPacientes.EnableHeadersVisualStyles = false;
-            this.dgvPacientes.Location = new System.Drawing.Point(0, 211);
+            this.dgvPacientes.Location = new System.Drawing.Point(0, 260);
+            this.dgvPacientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPacientes.MultiSelect = false;
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.ReadOnly = true;
             this.dgvPacientes.RowHeadersVisible = false;
+            this.dgvPacientes.RowHeadersWidth = 51;
             this.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPacientes.Size = new System.Drawing.Size(964, 134);
+            this.dgvPacientes.Size = new System.Drawing.Size(1285, 165);
             this.dgvPacientes.TabIndex = 2;
-            this.dgvPacientes.SelectionChanged += new System.EventHandler(this.dgvPacientes_SelectionChanged);
+            this.dgvPacientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPacientes_MouseDoubleClick);
             // 
             // panelBusqueda
             // 
@@ -225,16 +214,18 @@
             this.panelBusqueda.Controls.Add(this.lblBuscar);
             this.panelBusqueda.Controls.Add(this.btnBuscar);
             this.panelBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBusqueda.Location = new System.Drawing.Point(0, 130);
+            this.panelBusqueda.Location = new System.Drawing.Point(0, 160);
+            this.panelBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.panelBusqueda.Name = "panelBusqueda";
-            this.panelBusqueda.Size = new System.Drawing.Size(964, 45);
+            this.panelBusqueda.Size = new System.Drawing.Size(1285, 55);
             this.panelBusqueda.TabIndex = 8;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(200, 10);
+            this.txtBuscar.Location = new System.Drawing.Point(267, 12);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(250, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(332, 22);
             this.txtBuscar.TabIndex = 18;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -243,9 +234,10 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.ForeColor = System.Drawing.Color.Black;
-            this.lblBuscar.Location = new System.Drawing.Point(10, 12);
+            this.lblBuscar.Location = new System.Drawing.Point(13, 15);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(187, 20);
+            this.lblBuscar.Size = new System.Drawing.Size(236, 25);
             this.lblBuscar.TabIndex = 17;
             this.lblBuscar.Text = "Buscar (DNI o Apellido) : ";
             // 
@@ -254,65 +246,26 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, 188);
+            this.label1.Location = new System.Drawing.Point(13, 231);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.Size = new System.Drawing.Size(95, 25);
             this.label1.TabIndex = 19;
             this.label1.Text = "Pacientes";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(10, 365);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Historias Clinicas";
-            // 
-            // dgvHistoriasClinicas
-            // 
-            this.dgvHistoriasClinicas.AllowUserToAddRows = false;
-            this.dgvHistoriasClinicas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvHistoriasClinicas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvHistoriasClinicas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHistoriasClinicas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvHistoriasClinicas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistoriasClinicas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvHistoriasClinicas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistoriasClinicas.EnableHeadersVisualStyles = false;
-            this.dgvHistoriasClinicas.Location = new System.Drawing.Point(0, 388);
-            this.dgvHistoriasClinicas.MultiSelect = false;
-            this.dgvHistoriasClinicas.Name = "dgvHistoriasClinicas";
-            this.dgvHistoriasClinicas.ReadOnly = true;
-            this.dgvHistoriasClinicas.RowHeadersVisible = false;
-            this.dgvHistoriasClinicas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistoriasClinicas.Size = new System.Drawing.Size(964, 134);
-            this.dgvHistoriasClinicas.TabIndex = 21;
-            // 
             // FrmPacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(964, 601);
-            this.Controls.Add(this.dgvHistoriasClinicas);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1285, 740);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPacientes);
             this.Controls.Add(this.panelBusqueda);
             this.Controls.Add(this.panelAcciones);
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -326,7 +279,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
             this.panelBusqueda.ResumeLayout(false);
             this.panelBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoriasClinicas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,9 +299,6 @@
         private System.Windows.Forms.Panel panelBusqueda;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvHistoriasClinicas;
     }
 }

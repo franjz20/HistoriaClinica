@@ -17,7 +17,7 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void AbrirFormularioPanel(Form formHijo)
+        public void AbrirFormularioPanel(Form formHijo)
         {
             //Si hay algun formulario cargado, se lo borra de pantalla
             if (panelContenido.Controls.Count > 0)

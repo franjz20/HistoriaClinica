@@ -1,6 +1,6 @@
 ﻿namespace Vistas
 {
-    partial class FrmHistoriaClinicaAgregar
+    partial class FrmGestionHistoriaClinica
     {
         /// <summary>
         /// Required designer variable.

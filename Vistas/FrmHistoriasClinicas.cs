@@ -14,12 +14,15 @@ namespace Vistas
 {
     public partial class FrmHistoriasClinicas : Form
     {
-        public FrmHistoriasClinicas()
+        private readonly int _pacienteId;
+
+        public FrmHistoriasClinicas(int pacienteId = -1)
         {
             InitializeComponent();
             this.TopLevel = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Dock = DockStyle.Fill; //esto permite que el formulario se pegue dentro del panel principal
+            _pacienteId = pacienteId;
         }
 
         private void FrmHistoriasClinicas_Load(object sender, EventArgs e)
@@ -29,19 +32,22 @@ namespace Vistas
 
         private void load_historias_clinicas()
         {
-            DataTable tablaDatos = TrabajarHistoriasClinicas.listar_historias_clinicas();
+            if (_pacienteId < 0)
+            {
+                dgvHistoriasClinicas.DataSource = null;
+                return;
+            }
+
+            DataTable tablaDatos = TrabajarHistoriasClinicas.listar_HC_porPaciente(_pacienteId);
 
             dgvHistoriasClinicas.DataSource = tablaDatos;
 
-            if(dgvHistoriasClinicas.Rows.Count == 0)
-            {
-                //FrmHistoriaClinicaNueva oFrmHCNueva = new FrmHistoriaClinicaNueva();
-                //oFrmHCNueva.ShowDialog();
+        }
 
-                tablaDatos = TrabajarHistoriasClinicas.listar_historias_clinicas();
-                dgvHistoriasClinicas.DataSource = tablaDatos;
-            }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmGestionHistoriaClinica frm = new FrmGestionHistoriaClinica();
+            frm.Show();
         }
     }
 }

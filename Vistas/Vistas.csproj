@@ -63,11 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmHistoriaClinicaAgregar.cs">
+    <Compile Include="FrmGestionHistoriaClinica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHistoriaClinicaAgregar.Designer.cs">
-      <DependentUpon>FrmHistoriaClinicaAgregar.cs</DependentUpon>
+    <Compile Include="FrmGestionHistoriaClinica.Designer.cs">
+      <DependentUpon>FrmGestionHistoriaClinica.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHistoriasClinicas.cs">
       <SubType>Form</SubType>
@@ -122,8 +122,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmHistoriaClinicaAgregar.resx">
-      <DependentUpon>FrmHistoriaClinicaAgregar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmGestionHistoriaClinica.resx">
+      <DependentUpon>FrmGestionHistoriaClinica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHistoriasClinicas.resx">
       <DependentUpon>FrmHistoriasClinicas.cs</DependentUpon>

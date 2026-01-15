@@ -122,7 +122,7 @@ namespace Vistas
         }
 
         //Funciones de ayuda para el manejo del DataGridView
-        private int obtener_PacienteId_Seleccionado()
+        public int obtener_PacienteId_Seleccionado()
         {
             if (dgvPacientes.CurrentRow != null)
             {
@@ -169,5 +169,17 @@ namespace Vistas
             dgvPacientes.DataSource = TrabajarPaciente.buscar_pacientes(busqueda);
         }
 
+        private void dgvPacientes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (dgvPacientes.CurrentRow == null)
+                return;
+
+            int pacienteId = obtener_PacienteId_Seleccionado();
+            MessageBox.Show("Doble click en paciente ID: " + pacienteId);
+            var frm = new FrmHistoriasClinicas(pacienteId);
+            FrmMain main = (FrmMain)this.ParentForm;
+
+            main.AbrirFormularioPanel(frm);
+        }
     }
 }

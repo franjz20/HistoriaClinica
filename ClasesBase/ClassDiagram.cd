@@ -3,7 +3,7 @@
   <Class Name="ClasesBase.Usuario">
     <Position X="1.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIABAIBAASAAQAAgAIAAAACAAAAAAAIAgAA=</HashCode>
+      <HashCode>AAAAAAAAAIABAABAASAAQAAgAIAAAACAAAAAAAIAAAA=</HashCode>
       <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,14 +17,14 @@
   <Class Name="ClasesBase.Paciente">
     <Position X="4.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAgBCIAAABAAABCAAAQCAIIAKAAAAAAAgAAgAAQAOA=</HashCode>
+      <HashCode>gACgBCIAABBAAABCEAAQCAIIAKAAAIAAAgAAgAAQAOA=</HashCode>
       <FileName>Paciente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClasesBase.HistoriaClinica">
     <Position X="6.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAQAAAAAAAAAAAIAAAAAAIAAAIAAAACAAAAAAIA=</HashCode>
+      <HashCode>CAAAAAQBKAAAAAAAAgIAAAAAAYAAQIAAIACAAEgAAMA=</HashCode>
       <FileName>HistoriaClinica.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +52,7 @@
   <Class Name="ClasesBase.ObraSocial">
     <Position X="15" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAABgAAAAYAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>ObraSocial.cs</FileName>
     </TypeIdentifier>
   </Class>

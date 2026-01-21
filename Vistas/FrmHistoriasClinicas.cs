@@ -46,8 +46,10 @@ namespace Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmGestionHistoriaClinica frm = new FrmGestionHistoriaClinica();
-            frm.Show();
+            //FrmGestionHistoriaClinica frm = new FrmGestionHistoriaClinica();
+            //frm.Show();
+            FrmHistoriasClinicasAgregar frmAgregarHC = new FrmHistoriasClinicasAgregar(_pacienteId);
+            frmAgregarHC.Show();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Vistas
             InitializeComponent();
         }
 
-        private void AbrirFormularioPanel(Form formHijo)
+        public void AbrirFormularioPanel(Form formHijo)
         {
             //Si hay algun formulario cargado, se lo borra de pantalla
             if (panelContenido.Controls.Count > 0)
@@ -40,7 +40,7 @@ namespace Vistas
 
         private void btnHistoriaClinica_Click(object sender, EventArgs e)
         {
-            AbrirFormularioPanel(new FrmHistoriaClinicaAgregar());
+            AbrirFormularioPanel(new FrmHistoriasClinicas());
         }
 
         private void btnTurnos_Click(object sender, EventArgs e)

@@ -134,5 +134,38 @@ namespace ClasesBase
             return dt;
         }
 
+        public static Paciente obtener_paciente_id(int pacienteId)
+        {
+            SqlConnection cnn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Pacientes WHERE PacienteId=@pacienteId";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = cnn;
+
+            cmd.Parameters.AddWithValue("@pacienteId", pacienteId);
+
+            cnn.Open();
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            Paciente paciente = null;
+
+            if (reader.Read())
+            {
+                paciente = new Paciente
+                {
+                    Paciente_Id = Convert.ToInt32(reader["PacienteId"]),
+                    Paciente_Nombre = reader["Nombre"].ToString(),
+                    Paciente_Apellido = reader["Apellido"].ToString(),
+                    Paciente_Dni = Convert.ToInt32(reader["DNI"]),
+                    Paciente_FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"]),
+                };
+            }
+
+            cnn.Close();
+
+            return paciente;
+        }
     }
 }

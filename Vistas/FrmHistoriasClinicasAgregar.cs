@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using ClasesBase;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace Vistas
 {
@@ -20,25 +22,25 @@ namespace Vistas
         {
             InitializeComponent();
             this.idPaciente = pacienteId;
+
+            cargar_datos_paciente();
+        }
+
+        private void cargar_datos_paciente()
+        {
+            Paciente paciente = TrabajarPaciente.obtener_paciente_id(idPaciente);
+
+            if(paciente != null)
+            {
+                labelNombre.Text = "Nombre: " + paciente.Paciente_Nombre + " " + paciente.Paciente_Apellido;
+                labelDNI.Text = "DNI: " + paciente.Paciente_Dni.ToString();
+                lblEdad.Text = "Edad: " + calcular_edad(paciente.Paciente_FechaNacimiento).ToString();
+            }
         }
 
         private void btnGuardarPaciente_Click(object sender, EventArgs e)
         {
-            //HistoriaClinica nuevaHC = new HistoriaClinica();
-
-            //nuevaHC.Paciente_Id = idPaciente;
-            //nuevaHC.Hc_MotivoConsulta = txtMotivoConsulta.Text;
-            //nuevaHC.Hc_Antecedentes = txtAntecedentes.Text;
-            //nuevaHC.Hc_Sigvit_fc = Convert.ToInt32(txtSigVitFC.Text);
-            //nuevaHC.Hc_Sigvit_pa = txtSigVitPA.Text;
-            //nuevaHC.Hc_Sigvit_temp = float.Parse(txtSigVitTemp.Text);
-            //nuevaHC.Hc_Sigvit_sat = Convert.ToInt32(txtSigVitSat.Text);
-            //nuevaHC.Hc_ExploracionFisica = txtExploracionFisica.Text;
-            //nuevaHC.Hc_DiagnosticoPresuntivo = txtDiagPresuntivo.Text;
-            //nuevaHC.Hc_EstudiosSolicitados = txtEstudiosSolicitados.Text;
-            //nuevaHC.Hc_Tratamiento = txtTratamiento.Text;
-            //nuevaHC.Hc_Observaciones = txtObservaciones.Text;
-            //nuevaHC.Hc_FechaConsulta = dtpFechaConsulta.Value;
+            if (!validaciones()) return;
 
             HistoriaClinica nuevaHC = new HistoriaClinica();
 
@@ -56,8 +58,6 @@ namespace Vistas
             nuevaHC.Hc_observaciones = txtObservaciones.Text;
             nuevaHC.Hc_fechaConsulta = dtpFechaConsulta.Value;
 
-            if (!validaciones()) return;
-
             TrabajarHistoriasClinicas.insertar_Historia_Clinica(nuevaHC);
 
             MessageBox.Show("Historia clínica guardada correctamente");
@@ -71,69 +71,116 @@ namespace Vistas
         
         private bool validaciones()
         {
-            if (string.IsNullOrWhiteSpace(txtMotivoConsulta.Text))
+            if (
+                string.IsNullOrWhiteSpace(txtMotivoConsulta.Text) ||
+                string.IsNullOrWhiteSpace(txtAntecedentes.Text) ||
+                string.IsNullOrWhiteSpace(txtSigVitFC.Text) ||
+                string.IsNullOrWhiteSpace(txtSigVitPA.Text) ||
+                string.IsNullOrWhiteSpace(txtSigVitTemp.Text) ||
+                string.IsNullOrWhiteSpace(txtSigVitSat.Text) ||
+                string.IsNullOrWhiteSpace(txtExploracionFisica.Text) ||
+                string.IsNullOrWhiteSpace(txtDiagPresuntivo.Text) ||
+                string.IsNullOrWhiteSpace(txtEstudiosSolicitados.Text) ||
+                string.IsNullOrWhiteSpace(txtTratamiento.Text) ||
+                string.IsNullOrWhiteSpace(txtObservaciones.Text)
+               )
             {
-                MessageBox.Show("Ingrese el motivo de la consulta.");
+                MessageBox.Show("Debe completar todos los campos obligatorios.");
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtAntecedentes.Text))
+            // MOTIVO CONSULTA
+            if (string.IsNullOrWhiteSpace(txtMotivoConsulta.Text) || !texto_medico_valido(txtMotivoConsulta.Text))
             {
-                MessageBox.Show("Ingrese el antecendente.");
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtSigVitFC.Text))
-            {
-                MessageBox.Show("Ingrese Signos Vitales FC.");
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtSigVitPA.Text))
-            {
-                MessageBox.Show("Ingrese Signos Vitales PA.");
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtSigVitTemp.Text))
-            {
-                MessageBox.Show("Ingrese Signos Vitales Temp.");
-                return false;
-            } 
-            if (string.IsNullOrWhiteSpace(txtSigVitSat.Text))
-            {
-                MessageBox.Show("Ingrese Signos Vitales Sat.");
+                MessageBox.Show("Motivo de consulta inválido.");
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtExploracionFisica.Text))
+            // ANTECEDENTES
+            if (string.IsNullOrWhiteSpace(txtAntecedentes.Text) || !texto_medico_valido(txtAntecedentes.Text))
             {
-                MessageBox.Show("Ingrese Exploracion fisica.");
+                MessageBox.Show("Antecedentes inválidos.");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtDiagPresuntivo.Text))
+
+            // FRECUENCIA CARDÍACA (solo números)
+            if (!int.TryParse(txtSigVitFC.Text, out int fc) || fc <= 0 || fc > 250)
             {
-                MessageBox.Show("Ingrese Diagnostico presuntivo.");
+                MessageBox.Show("Frecuencia cardíaca inválida.");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtEstudiosSolicitados.Text))
+
+            // PRESIÓN ARTERIAL formato 120/80
+            if (!Regex.IsMatch(txtSigVitPA.Text, @"^\d{2,3}/\d{2,3}$"))
             {
-                MessageBox.Show("Ingrese Estudios Solicitados.");
+                MessageBox.Show("Presión arterial inválida. Ej: 120/80");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtTratamiento.Text))
+
+            // TEMPERATURA (decimal con punto o coma)
+            string tempTexto = txtSigVitTemp.Text.Replace(',', '.');
+
+            if (!float.TryParse(tempTexto, NumberStyles.Any, CultureInfo.InvariantCulture, out float temp) || temp < 30 || temp > 45)
             {
-                MessageBox.Show("Ingrese Tratamiento.");
+                MessageBox.Show("Temperatura inválida.");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtObservaciones.Text))
+
+            // SATURACIÓN (0–100)
+            if (!int.TryParse(txtSigVitSat.Text, out int sat) || sat < 0 || sat > 100)
             {
-                MessageBox.Show("Ingrese Observaciones.");
+                MessageBox.Show("Saturación de oxígeno inválida (0-100).");
                 return false;
             }
-            //if (string.IsNullOrWhiteSpace(txtSigVitFC.Text)) ---> esta parte es para validar fecha.
-            //{
-            //MessageBox.Show("Ingrese Signos Vitales FC.");
-            //return;
-            //}
+
+            // EXPLORACIÓN FÍSICA
+            if (string.IsNullOrWhiteSpace(txtExploracionFisica.Text) || !texto_medico_valido(txtExploracionFisica.Text))
+            {
+                MessageBox.Show("Exploración física inválida.");
+                return false;
+            }
+
+            // DIAGNÓSTICO
+            if (string.IsNullOrWhiteSpace(txtDiagPresuntivo.Text) || !texto_medico_valido(txtDiagPresuntivo.Text))
+            {
+                MessageBox.Show("Diagnóstico inválido.");
+                return false;
+            }
+
+            // ESTUDIOS
+            if (string.IsNullOrWhiteSpace(txtEstudiosSolicitados.Text) || !texto_medico_valido(txtEstudiosSolicitados.Text))
+            {
+                MessageBox.Show("Estudios solicitados inválidos.");
+                return false;
+            }
+
+            // TRATAMIENTO
+            if (string.IsNullOrWhiteSpace(txtTratamiento.Text) || !texto_medico_valido(txtTratamiento.Text))
+            {
+                MessageBox.Show("Tratamiento inválido.");
+                return false;
+            }
+
+            // OBSERVACIONES
+            if (string.IsNullOrWhiteSpace(txtObservaciones.Text) || !texto_medico_valido(txtObservaciones.Text))
+            {
+                MessageBox.Show("Observaciones inválidas.");
+                return false;
+            }
+
             return true;
+        }
+
+        private bool texto_medico_valido(string texto)
+        {
+            return Regex.IsMatch(texto, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s.,:;()%°+\-/""]+$");
+        }
+
+        private int calcular_edad(DateTime fechaNacimiento)
+        {
+            int edad = DateTime.Now.Year - fechaNacimiento.Year;
+            if (fechaNacimiento.Date > DateTime.Today.AddYears(-edad)) edad--;
+            return edad;
         }
     }
 }

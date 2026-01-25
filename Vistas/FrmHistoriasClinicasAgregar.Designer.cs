@@ -32,9 +32,9 @@
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelPacienteInfo = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.labelDNI = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
             this.btnGuardarPaciente = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.tlpFormulario = new System.Windows.Forms.TableLayoutPanel();
@@ -102,9 +102,9 @@
             // 
             // panelPacienteInfo
             // 
-            this.panelPacienteInfo.Controls.Add(this.label3);
-            this.panelPacienteInfo.Controls.Add(this.label2);
-            this.panelPacienteInfo.Controls.Add(this.label1);
+            this.panelPacienteInfo.Controls.Add(this.lblEdad);
+            this.panelPacienteInfo.Controls.Add(this.labelDNI);
+            this.panelPacienteInfo.Controls.Add(this.labelNombre);
             this.panelPacienteInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPacienteInfo.Location = new System.Drawing.Point(0, 60);
             this.panelPacienteInfo.Name = "panelPacienteInfo";
@@ -112,38 +112,38 @@
             this.panelPacienteInfo.Size = new System.Drawing.Size(411, 70);
             this.panelPacienteInfo.TabIndex = 1;
             // 
-            // label3
+            // lblEdad
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(299, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Edad: 24 años";
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblEdad.Location = new System.Drawing.Point(299, 29);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(81, 15);
+            this.lblEdad.TabIndex = 2;
+            this.lblEdad.Text = "Edad: 24 años";
             // 
-            // label2
+            // labelDNI
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(202, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "DNI: 1234456 |";
+            this.labelDNI.AutoSize = true;
+            this.labelDNI.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDNI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelDNI.Location = new System.Drawing.Point(202, 30);
+            this.labelDNI.Name = "labelDNI";
+            this.labelDNI.Size = new System.Drawing.Size(87, 15);
+            this.labelDNI.TabIndex = 1;
+            this.labelDNI.Text = "DNI: 1234456 ";
             // 
-            // label1
+            // labelNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(38, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Paciente: Franco Juarez |";
+            this.labelNombre.AutoSize = true;
+            this.labelNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelNombre.Location = new System.Drawing.Point(38, 29);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(140, 15);
+            this.labelNombre.TabIndex = 0;
+            this.labelNombre.Text = "Paciente: Franco Juarez ";
             // 
             // btnGuardarPaciente
             // 
@@ -530,9 +530,9 @@
         private System.Windows.Forms.Panel panelPacienteInfo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblSubTitulo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.Label labelDNI;
+        private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Button btnGuardarPaciente;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TableLayoutPanel tlpFormulario;

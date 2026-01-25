@@ -93,6 +93,8 @@ namespace Vistas
 
         private void agregar_paciente()
         {
+            if (!validaciones()) return;
+
             Paciente nuevo_paciente = new Paciente();
 
             int dni, telefono, numeroAfiliado;
@@ -135,6 +137,8 @@ namespace Vistas
 
         private void modificar_paciente()
         {
+            if (!validaciones()) return;
+
             Paciente mod_paciente = new Paciente();
 
             int dni, telefono, numeroAfiliado;
@@ -176,6 +180,27 @@ namespace Vistas
             TrabajarPaciente.modificar_paciente(mod_paciente);
         }
 
+        private bool validaciones()
+        {
+            if (
+                string.IsNullOrWhiteSpace(txtDni.Text) ||
+                string.IsNullOrWhiteSpace(txtApellido.Text) ||
+                string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                cmbGenero.SelectedItem == null || 
+                string.IsNullOrWhiteSpace(txtTelefono.Text) ||
+                string.IsNullOrWhiteSpace(txtDireccion.Text) || 
+                string.IsNullOrWhiteSpace(txtEmail.Text) || 
+                string.IsNullOrWhiteSpace(txtObraSocial.Text) ||
+                string.IsNullOrWhiteSpace(txtNumeroAfiliado.Text) ||
+                string.IsNullOrWhiteSpace(txtObservaciones.Text)
+               )
+            {
+                MessageBox.Show("Debe completar todos los campos obligatorios.");
+                return false;
+            }
+            
+            return true;
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
